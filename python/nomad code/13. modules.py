@@ -7,5 +7,5 @@ print(factorial(5))
 print(fsum([1,2,3,4,5,6,7]))
 
 from calculator import plus, minus
-
+#모듈을 만들고 import 할 수 있음
 print(plus(1,2), minus(1,2))
