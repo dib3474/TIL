@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_file
 from scraper import get_jobs
-
+from exporter import save_to_file
 app = Flask("ScraperWeb")
 
 db = {}
@@ -28,5 +28,19 @@ def report():
     jobs=jobs
   )
   
+@app.route("/export")
+def export():
+  try:
+    word = request.args.get('word')
+    if not word:
+      raise Exception()
+    word = word.lower()
+    jobs = db.get(word)
+    if not jobs:
+      raise Exception()
+    save_to_file(jobs, word)
+    return send_file(f"{word}.csv")
+  except:
+    return redirect("/")
 
 app.run(host="0.0.0.0")
