@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Anton', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.playlist-main {
+  height: 100vh;
+  width: 300px;
+  border: 5px solid #26c0ad;
+}
+.status-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.status-bar__column:first-child {
+  transform: translateX(-60px);
+  font-size: 25px;
+}
+.status-bar__column {
+  font-size: 30px;
+}
+.playlist-header {
+  padding-left: 20px;
+  display: flex;
+}
+.playlist-header__pic {
+  background-color: #febd11;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playlist-header__pic i {
+  scale: 2;
+}
+.playlist-header__title {
+  font-size: 30px;
+  padding: 10px;
+  line-height: 30px
+}
+.playlist-header__singer {
+  margin-left: 10px;
+}
+.menu-btn {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.menu-btn__play {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.menu-btn__play i {
+  margin-right: 10px;
+}
+.menu-btn__like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-radius: 50%;
+}
+.menu-btn__plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-radius: 50%;
+}
+.menu-btn__play, .menu-btn__like, .menu-btn__plus {
+  border: 2px solid black;
+  border-width: 2px 2px 4px;
+  font-size: 20px;
+}
+.musiclist {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1000;
+  margin: 25px;
+}
+.musiclist__music {
+  display: flex;
+  margin-top: 30px;
+}
+.musiclist__music__pic {
+  border: 2px solid black;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+.musiclist__music__text {
+  margin-left: 10px;
+}
+.musiclist__music__singer {
+  font-size: 12px;
+  margin-top: 7px;
+  font-weight: 500;
+}
+.musiclist__music:nth-child(1) .musiclist__music__pic {
+  background-color: #f85a2a;
+}
+.musiclist__music:nth-child(2) .musiclist__music__pic {
+  background-color: #ff8abb;
+}
+.musiclist__music:nth-child(3) .musiclist__music__pic {
+  background-color: #1746e4;
+}
+.musiclist__music:nth-child(4) .musiclist__music__pic {
+  background-color: #00c5ae;
+}
